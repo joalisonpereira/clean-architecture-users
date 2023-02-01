@@ -10,8 +10,5 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json'
   },
-  rules: {
-    '@typescript-eslint/strict-boolean-expressions': 'off',
-    '@typescript-eslint/no-misused-promises': 'off'
-  }
+  rules: {}
 };
