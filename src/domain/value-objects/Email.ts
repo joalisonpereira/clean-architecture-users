@@ -1,4 +1,4 @@
-import { InvalidValueException } from 'src/domain/errors/InvalidEmailException';
+import { InvalidValueException } from '../errors/InvalidValueException';
 
 export class Email {
   constructor(private readonly email: string) {
@@ -8,7 +8,7 @@ export class Email {
   }
 
   static validate(value: string): boolean {
-    return !/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value);
+    return /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value);
   }
 
   get value(): string {
