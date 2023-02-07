@@ -15,7 +15,6 @@ export class CreateUserUseCase {
   async execute(data: Input): Output {
     await this.repository.create(
       new User({
-        id: '1',
         name: data.name,
         email: new Email(data.email)
       })

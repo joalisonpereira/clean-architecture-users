@@ -2,7 +2,7 @@ import { type Email } from 'src/domain/value-objects/Email';
 import { type Uuid } from 'src/domain/value-objects/Uuid';
 
 export interface UserProps {
-  id: Uuid | null;
+  id?: Uuid;
   name: string;
   email: Email;
 }
@@ -12,6 +12,10 @@ export class User {
 
   get id(): UserProps['id'] {
     return this.props.id;
+  }
+
+  set id(id: UserProps['id']) {
+    this.props.id = id;
   }
 
   get name(): string {

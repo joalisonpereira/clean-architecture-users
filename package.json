@@ -10,6 +10,7 @@
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
     "lint": "npx eslint src --fix",
+    "check-types": "tsc --noemit",
     "prepare": "husky install"
   },
   "repository": {

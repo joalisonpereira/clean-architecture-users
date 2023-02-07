@@ -8,14 +8,14 @@ describe('Entities/User', () => {
     expect(User).toBeDefined();
   });
 
-  it('should create user', () => {
+  it('should create user instance', () => {
     const user = new User({
       id: new Uuid('184b1b04-ae96-45a7-9bda-697b27f82b04'),
       name: 'Test Boy',
       email: new Email('testboy@email.com')
     });
 
-    expect(user.id.value).toBeDefined();
+    expect(user.id?.value).toBeDefined();
 
     expect(user.name).toBeDefined();
 
