@@ -1,4 +1,6 @@
+import { type User } from '../entities/User';
+
 export interface UserRepository {
-  create: (data: any) => Promise<any>;
+  create: (data: User) => Promise<any>;
   delete: (uuid: string) => Promise<any>;
 }
