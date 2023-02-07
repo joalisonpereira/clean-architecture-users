@@ -1,4 +1,4 @@
-import { CreateUserUseCase } from 'src/app/use-cases/create-user';
+import { CreateUserUseCase } from 'src/app/use-cases/CreateUserUseCase';
 import { UserInMemoryRepository } from 'src/infra/repositories/UserInMemoryRepository';
 import { describe, expect, it } from 'vitest';
 

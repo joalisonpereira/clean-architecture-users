@@ -1,4 +1,4 @@
-import { DeleteUserUseCase } from 'src/app/use-cases/delete-user';
+import { DeleteUserUseCase } from 'src/app/use-cases/DeleteUserUseCase';
 import { User } from 'src/domain/entities/User';
 import { Email } from 'src/domain/value-objects/Email';
 import { Uuid } from 'src/domain/value-objects/Uuid';
