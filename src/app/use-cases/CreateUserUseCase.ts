@@ -1,5 +1,6 @@
 import { User } from 'src/domain/entities/User';
 import { type UserRepository } from 'src/domain/repositories/UserRepository';
+import { Email } from 'src/domain/value-objects/Email';
 
 interface Input {
   name: string;
@@ -12,6 +13,12 @@ export class CreateUserUseCase {
   constructor(private readonly repository: UserRepository) {}
 
   async execute(data: Input): Output {
-    await this.repository.create(new User(data));
+    await this.repository.create(
+      new User({
+        id: '1',
+        name: data.name,
+        email: new Email(data.email)
+      })
+    );
   }
 }

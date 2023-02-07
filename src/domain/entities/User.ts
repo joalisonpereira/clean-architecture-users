@@ -2,7 +2,7 @@ import { type Email } from 'src/domain/value-objects/Email';
 import { type Uuid } from 'src/domain/value-objects/Uuid';
 
 export interface UserProps {
-  id: Uuid;
+  id: Uuid | null;
   name: string;
   email: Email;
 }
@@ -10,7 +10,7 @@ export interface UserProps {
 export class User {
   constructor(private readonly props: UserProps) {}
 
-  get id(): Uuid {
+  get id(): UserProps['id'] {
     return this.props.id;
   }
 
