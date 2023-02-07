@@ -32,4 +32,15 @@ describe('Entities/User', () => {
         })
     ).toThrow(Error);
   });
+
+  it('should throws InvalidValueException', () => {
+    expect(
+      () =>
+        new User({
+          id: new Uuid('invalid-id'),
+          name: 'Test Boy',
+          email: new Email('valid.email@email.com')
+        })
+    ).toThrow(Error);
+  });
 });
